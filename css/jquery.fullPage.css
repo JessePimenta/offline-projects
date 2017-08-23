@@ -29,6 +29,7 @@ html.fp-enabled,
     -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
     -moz-box-sizing: border-box; /* <=28 */
     box-sizing: border-box;
+    background: black;
 }
 .fp-slide {
     float: left;
@@ -51,7 +52,7 @@ html.fp-enabled,
     width: 100%;
 }
 .fp-tableCell {
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: middle;
     width: 100%;
     height: 100%;
@@ -174,7 +175,7 @@ html.fp-enabled,
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: #000;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
