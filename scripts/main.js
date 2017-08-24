@@ -1,10 +1,34 @@
 $(document).ready(function() {
+
+  $('#button').mouseenter(function(){
+    $('#msg1').css('display','none');
+    $('#msg2').css('display','none');
+    $('.onlineProjectsText').css('display','block');
+    $('.onlineProjectsText').css('color','black');
+    $('#contact').css('color','black');
+    $('header').css('color','black');
+    $('.contentBox').css('border-color','black');
+    $('video').css('filter','invert(100%)');
+  })
+  $('#button').mouseleave(function(){
+    $('#msg1').css('display','block');
+    $('#msg2').css('display','block');
+    $('.onlineProjectsText').css('display','none');
+    $('video').css('filter','invert(0%)');
+    $('.onlineProjectsText').css('color','white');
+    $('#contact').css('color','white');
+    $('header').css('color','white')
+    $('.contentBox').css('border-color','white');
+
+  })
+
+
 	$('#fullpage').fullpage({
     css3: true,
 		scrollingSpeed: 1700,
 		autoScrolling: true,
-		fitToSection: false,
-		fitToSectionDelay: 1000,
+		fitToSection: true,
+		fitToSectionDelay: 100,
 		scrollBar: false,
 		easing: 'easeInOutCubic',
 		easingcss3: 'ease',
@@ -12,7 +36,8 @@ $(document).ready(function() {
 		loopTop: false,
 		loopHorizontal: true,
 		continuousVertical: false,
-		continuousHorizontal: false,
+		continuousHorizontal: true,
+    scrollHorizontallyKey: 'MC4wLjAuMF9kTVNjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVkWU0=',
 		scrollHorizontally: true,
 		interlockedSlides: false,
 		dragAndMove: true,
@@ -27,8 +52,9 @@ $(document).ready(function() {
 		normalScrollElementTouchThreshold: 5,
 		bigSectionsDestination: null,
     controlArrows: true,
+    anchors:['firstPage', 'secondPage', 'thirdPage'],
 		verticalCentered: true,
-		sectionsColor : ['#000', '#fff'],
+		sectionsColor : ['#000', '#000'],
 		paddingTop: '0em',
 		paddingBottom: '0px',
 		fixedElements: '#header, .footer',
@@ -45,10 +71,14 @@ $(document).ready(function() {
 			// alert("Going to section 2!");
       $('#console').css('opacity','0')
       $('#console').css('transition','2s')
-		}
 
+		}
 		else if(index == 2 && direction == 'up'){
 			// alert("Going to section 1!");
+      $('#fullpage').animate({
+        transform: "translate3d(0px, 0px, 0px)"
+      },100)
+      console.log('is this working');
       $('#console').css('opacity','1')
       $('#console').css('transition','2s')
 
@@ -62,5 +92,10 @@ $(document).ready(function() {
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });
 
-
+$('#contact').click(function(){
+  $.fn.fullpage.moveSectionDown();
+})
+$('#home').click(function(){
+  $.fn.fullpage.moveSectionUp();
+})
 });
