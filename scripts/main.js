@@ -6,9 +6,12 @@ $(document).ready(function() {
     $('.onlineProjectsText').css('display','block');
     $('.onlineProjectsText').css('color','black');
     $('#contact').css('color','black');
+    $('#work').css('color','black');
     $('header').css('color','black');
     $('.contentBox').css('border-color','black');
     $('video').css('filter','invert(100%)');
+    $('video').css('opacity','1');
+
   })
   $('#button').mouseleave(function(){
     $('#msg1').css('display','block');
@@ -17,10 +20,15 @@ $(document).ready(function() {
     $('video').css('filter','invert(0%)');
     $('.onlineProjectsText').css('color','white');
     $('#contact').css('color','white');
+    $('#work').css('color','white');
     $('header').css('color','white')
     $('.contentBox').css('border-color','white');
+    $('video').css('opacity','.1');
+
 
   })
+
+
 
 
 	$('#fullpage').fullpage({
@@ -53,11 +61,11 @@ $(document).ready(function() {
 		touchSensitivity: 15,
 		normalScrollElementTouchThreshold: 5,
 		bigSectionsDestination: null,
-    controlArrows: true,
+    controlArrows: false,
     anchors:['firstPage', 'secondPage', 'thirdPage'],
 		verticalCentered: true,
 		sectionsColor : ['#000', '#000'],
-		paddingTop: '1em',
+		paddingTop: '1px',
 		paddingBottom: '0px',
 		fixedElements: '#header, .footer',
 		responsiveWidth: 0,
@@ -96,6 +104,9 @@ $(document).ready(function() {
 
 $('#contact').click(function(){
   $.fn.fullpage.moveSectionDown();
+})
+$('#work').click(function(){
+  $.fn.fullpage.moveSectionRight();
 })
 $('#home').click(function(){
   $.fn.fullpage.moveSectionUp();
