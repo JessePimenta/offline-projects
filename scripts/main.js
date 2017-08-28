@@ -71,6 +71,7 @@ $(document).ready(function() {
 		responsiveWidth: 0,
 		responsiveHeight: 0,
 		responsiveSlides: true,
+    keyboardScrolling: true,
 		parallax: true,
 		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
     onLeave: function(index, nextIndex, direction){
@@ -106,7 +107,7 @@ $('#contact').click(function(){
   $.fn.fullpage.moveSectionDown();
 })
 $('#work').click(function(){
-  $.fn.fullpage.moveSectionRight();
+  $.fn.fullpage.moveSlideRight();
 })
 $('#home').click(function(){
   $.fn.fullpage.moveSectionUp();
