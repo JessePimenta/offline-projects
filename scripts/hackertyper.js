@@ -118,8 +118,8 @@ $(function () {
   showText("#msg1", "Offline Projects is a new media experiential series, showcasing progressive underground talent in untraditional spaces.", 0, 100);
 
   setTimeout(function () {
-    showText("#msg2", "Every OP experience follows a simple formula:", 0, 100);
-  }, 12000);
+    showText("#msg2", "Every OP experience follows a simple formula: forward-thinking musician + new media artist + unique space. Our vision is to bridge the gap between art and nightlife using popup site-specific experiences. Each iteration is a distinctive onetime event – never repeating, always innovating.", 0, 100);
+  }, 13000);
 
 });
  $(document).ready(function () {

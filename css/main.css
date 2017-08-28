@@ -108,6 +108,7 @@ p#carat3 {
 
 .contactInfo {
     position: relative;
+    transform: translateY(-30px);
 }
 
   img#contact-bg {
@@ -124,6 +125,12 @@ p#carat3 {
 @media (max-width:640px) {
 
   #button {
+  top: 20px !important;
+  left: 20px !important;
+
+}
+
+  #button2 {
   top: 20px !important;
   left: 20px !important;
 
@@ -176,17 +183,34 @@ p#carat3 {
 }
 
 #button {
-  width: 50px;
+  width: 40px;
   height: 100px;
-  border: 10px solid white;
+  border: 5px solid white;
   z-index: 3;
-  border-radius: 0;
+  border-radius: 2px;
+  background: white;
   box-sizing: border-box;
   top: 30px;
   left: 30px;
   -webkit-animation: switchOff 1300ms linear infinite alternate;
-  animation: switchOff 600ms linear infinite alternate;
+  animation: switchOff 1300ms linear infinite alternate;
 }
+
+#button2  {
+  height: 60px;
+  width: 40px;
+  border: 4px solid white;
+  z-index: 3;
+  border-radius: 2px;
+  background: black;
+  box-sizing: border-box;
+  top: 30px;
+  left: 30px;
+  -webkit-animation: switchOff 1300ms linear infinite alternate;
+  animation: switchOff 1300ms linear infinite alternate;
+  position: absolute;
+}
+
 
 #button:hover {
   animation: none;
@@ -198,11 +222,11 @@ p#carat3 {
 
 @keyframes switchOff {
   from {
-    border: 5px solid white;
+    border: 2px solid white;
     opacity: 0.1;
   }
   to {
-    border: 10px solid white;
+    border: 5px solid white;
     opacity: 1;
   }
 }
@@ -234,7 +258,8 @@ padding-top: 77px;
 }
 div#msg2 {
   font-size: 22px;
-  width: 300px;
+  width: 540px;
+  margin-top: 90px;
   }
 
   .onlineProjectsText {
@@ -269,7 +294,8 @@ div#msg2 {
 }
 div#msg2 {
   font-size: 22px;
-  width: 330px;
+  width: 260px;
+  margin-top: -100px;
 }
 }
 
@@ -435,7 +461,7 @@ textarea:focus, input:focus{
 /*----------------------*/
 
 #msg2{
-  width: 1000px;
+  width: 870px;
   font-size: 25px;
   margin-top: 90px;
 }
@@ -512,4 +538,114 @@ p#upcomingText {
     margin-right: 0px;
     margin-bottom: 0px;
     transform: translateX(8px);
+}
+
+.media-container {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.media-container > h1 {
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.media-container > a > img {
+    filter: invert(100%);
+    width: 60px;
+}
+
+#backToHome {
+    color: white;
+    transform: rotate(90deg);
+    float: left;
+    z-index: 2;
+    position: relative;
+    margin-top: 272px;
+    padding-right: 40px;
+}
+
+#homeText {
+    transform: translate(15px);
+}
+
+a#upcoming-link {position: relative;font-size: 2em;text-decoration: none;text-align: center;/* margin-left: 100px; */}
+
+.goBack {
+    font-size: 18px;
+    /* margin-top: -50px; */
+    transform: translateY(-10px);
+}
+
+p#carat4 {
+    transform: rotate(180deg);
+    margin-top: auto;
+}
+
+
+.form-container {
+    color: black;
+    position: relative;
+}
+
+.form-container > h1 {
+    color: black;
+    font-weight: normal;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+    padding: 12px;
+    background: transparent;
+    font-size: 20px;
+    font-family: "Optima", sans-serif;
+    /* text-decoration: underline; */
+    color: white;
+}
+
+input[type="email"] {
+    border: 1px solid black;
+    padding: 12px;
+    background: transparent;
+    font-size: 20px;
+    font-family: "Optima", sans-serif;
+    /* text-decoration: underline; */
+    color: white;
+}
+
+.socials {
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+.socials > img {
+    width: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+.socials > a > img {
+    width: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: pink;
 }
