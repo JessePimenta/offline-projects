@@ -139,6 +139,10 @@ p#carat3 {
     font-size: 20px;
   }
 
+  h1#subcopy {
+    width: 290px;
+}
+
 }
 @media (max-width:1084px) and (min-width:640px) {
 
