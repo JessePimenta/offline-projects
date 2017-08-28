@@ -106,7 +106,6 @@
 // 		else
 // 			this.write("|"); // else write it
 // 	}
-/*MY FIRST JAVASCRIPT PROJECT not changing it if it works it works right :D*/
 var showText = function (target, message, index, interval) {
   if (index < message.length) {
     $(target).append(message[index++]);

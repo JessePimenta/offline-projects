@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#button').mouseenter(function(){
+  $('#button').hover(function(){
     $('#msg1').css('display','none');
     $('#msg2').css('display','none');
     $('.onlineProjectsText').css('display','block');
@@ -11,10 +11,15 @@ $(document).ready(function() {
     $('.contentBox').css('border-color','black');
     $('video').css('filter','invert(100%)');
     $('video').css('opacity','1');
+    $('#workText').css("display", "none")
+    $('#upcomingText').css("display","block")
+
 
   })
-  $('#button').mouseleave(function(){
+  $('.contentBox').hover(function(){
     $('#msg1').css('display','block');
+    $('#upcomingText').css("display","none")
+    $('#workText').css("display", "block")
     $('#msg2').css('display','block');
     $('.onlineProjectsText').css('display','none');
     $('video').css('filter','invert(0%)');
@@ -23,7 +28,7 @@ $(document).ready(function() {
     $('#work').css('color','white');
     $('header').css('color','white')
     $('.contentBox').css('border-color','white');
-    $('video').css('opacity','.1');
+    $('video').css('opacity','1');
 
 
   })
@@ -41,18 +46,18 @@ $(document).ready(function() {
 		easing: 'easeInOutCubic',
 		easingcss3: 'ease',
 		loopBottom: true,
-		loopTop: false,
+		loopTop: true,
 		loopHorizontal: true,
 		continuousVertical: false,
 		continuousHorizontal: true,
     scrollHorizontallyKey: 'MC4wLjAuMF9kTVNjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVkWU0=',
 		scrollHorizontally: true,
-		interlockedSlides: false,
+		interlockedSlides: true,
 		dragAndMove: true,
 		offsetSections: false,
-		resetSliders: false,
+		resetSliders: true,
 		fadingEffect: true,
-		normalScrollElements: '#element1, .element2',
+		normalScrollElements: '#element1, .element2, .contentBox',
 		scrollOverflow: false,
 		scrollOverflowReset: false,
 		scrollOverflowOptions: null,
@@ -62,7 +67,7 @@ $(document).ready(function() {
 		normalScrollElementTouchThreshold: 5,
 		bigSectionsDestination: null,
     controlArrows: false,
-    anchors:['firstPage', 'secondPage', 'thirdPage'],
+    anchors:['home', 'connect', ''],
 		verticalCentered: true,
 		sectionsColor : ['#000', '#000'],
 		paddingTop: '1px',

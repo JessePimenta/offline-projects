@@ -10,6 +10,7 @@ header {
     z-index: 1;
     color: white;
     text-align: center;
+    letter-spacing: 1px;
     margin-top: -50px;
     text-decoration: underline;
     /* padding-top: 20px; */
@@ -51,6 +52,10 @@ video {
 
 p#carat2 {
     transform: translate(8px);
+}
+
+p#carat3 {
+    transform: translate(25px);
 }
   .contentBox {
       width: 860px;
@@ -328,7 +333,7 @@ div#msg2 {
   -webkit-filter: blur(1px);
   font-size: 60px;
   font-family:'Optima', fixed;
-  font-weight:bold;
+  font-weight: bold;
 }
 .buzz_wrapper span1:nth-child(1){
   color:#fff;
@@ -487,4 +492,24 @@ div#work {
     position: relative;
     margin-top: -330px;
     padding-right: 40px;
+}
+p {
+  font-weight: normal;
+  letter-spacing: .5px;
+}
+h1.email {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+h1.name {
+    font-weight: normal;
+}
+p#upcomingText {
+    transform: translate(10px);
+    margin-left: -30px;
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    transform: translateX(8px);
 }
