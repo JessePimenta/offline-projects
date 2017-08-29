@@ -84,6 +84,7 @@ p#carat3 {
       /* padding-left: 50px; */
       /* padding-right: 50px; */
       z-index: 1;
+      overflow-x: initial;
       font-size: 7.5px;
       position: relative;
       color: white;
@@ -109,6 +110,7 @@ p#carat3 {
 .contactInfo {
     position: relative;
     transform: translateY(-30px);
+    overflow-y: scroll;
 }
 
   img#contact-bg {
@@ -121,6 +123,26 @@ p#carat3 {
     border-top: 1px solid black;
 }
 
+
+/* iPhone 6 and 6 Plus */
+@media only screen
+  and (max-device-width: 640px),
+  only screen and (max-device-width: 667px),
+  only screen and (max-width: 480px)
+{
+  .onlineProjectsText {
+
+  }
+
+  h1#subcopy {
+    width: 260px !important;
+}
+div#msg2 {
+    font-size: 18px;
+    width: 260px;
+    margin-top: -100px;
+}
+ }
 
 @media (max-width:640px) {
 
@@ -169,6 +191,63 @@ p#carat3 {
     border: none;
   }
 
+}
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+
+
+.contentBox2 {
+    /* width: 60%; */
+    height: 650px !important;
+    text-align: center;
+    margin: 0 auto;
+    /* border: 4px solid white; */
+    /* padding-top: 30px; */
+    padding-bottom: 30px;
+    /* padding-left: 50px; */
+    /* padding-right: 50px; */
+    z-index: 1;
+    overflow-x: initial;
+    overflow-y: visible;
+    font-size: 7.5px;
+    position: relative;
+    color: white;
+    margin-top: 50px;
+}
+
+  .contactInfo {
+    overflow-y: scroll;
+    height: 600px;
+  }
+
+  .goBack {
+    font-size: 18px;
+    /* margin-top: -50px; */
+    transform: translateY(0px);
+}
+  .buzz_wrapper {
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    height: 550px;
+  }
+
+  .bottomLink {
+    padding-top: 0px;
+    margin-top: -100px;
+    padding-right: 0px;
+  }
+
+}
+/*@media (max-width:375px) {
+
+}*/
+
+@media (max-width:414px) {
+  .media-container {
+      padding-top: 0px !important;
+      padding-right: 50px;
+  }
 }
 
 #dark,
@@ -544,6 +623,8 @@ p#upcomingText {
     transform: translateX(8px);
 }
 
+input#submitemail {border: 1px solid black;padding: 12px;background: black;font-size: 20px;font-family: "Optima", sans-serif;/* text-decoration: underline; */color: white;}
+
 .media-container {
     margin: 0 auto;
     text-align: center;
@@ -567,7 +648,7 @@ p#upcomingText {
     float: left;
     z-index: 2;
     position: relative;
-    margin-top: 272px;
+    margin-top: -123px;
     padding-right: 40px;
 }
 
@@ -580,7 +661,7 @@ a#upcoming-link {position: relative;font-size: 2em;text-decoration: none;text-al
 .goBack {
     font-size: 18px;
     /* margin-top: -50px; */
-    transform: translateY(-10px);
+    transform: translateY(0px);
 }
 
 p#carat4 {
@@ -596,7 +677,7 @@ p#carat4 {
 
 .form-container > h1 {
     color: black;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 input[type="text"] {
@@ -607,6 +688,7 @@ input[type="text"] {
     font-family: "Optima", sans-serif;
     /* text-decoration: underline; */
     color: white;
+    margin-bottom: 10px;
 }
 
 input[type="email"] {
@@ -642,14 +724,14 @@ form {
 
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: white;
+  color: black;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: pink;
+  color: black;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: pink;
+  color: black;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: pink;
+  color: black;
 }

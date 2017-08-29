@@ -10,7 +10,7 @@
   <meta property="og:description" content="Offline Projects is a new media experiential series, showcasing progressive underground talent in untraditional spaces.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/OGIMAGE.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=.9">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/jquery.fullPage.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@
 <body>
   <div id="fullpage">
     <div class="section">
-      <div class="slide">
+      <div class="slide slide1">
         <header>
           <p>OFFLINE PROJECTS</p>
         </header>
@@ -82,7 +82,7 @@
     <p id='upcomingText' style='display:none'>UPCOMING</p>
     <p id='carat2'>╲╱</p>
   </div>
-  <video id="source" data-autoplay data-keepplaying loop preload>
+  <video id="source" muted playsinline data-autoplay data-keepplaying loop preload>
            <source src="assets/stringout1.mp4" type="video/mp4">
           </video>
   <!-- <canvas id="playback"></canvas> -->
@@ -100,25 +100,26 @@
   </div>
   </div>
   <div class="slide">
-    <div id='backToHome' class="">
-      <p id='homeText'>HOME</p>
-      <p id='carat3'>╲╱</p>
-    </div>
     <div class="media-container">
       <h1 id='media-kit'>MEDIA KIT</h1>
       <a id='media-pdf' href="assets/OP_MediaKit_063017 (1).pdf" download><img src="assets/pdf-logo.ico" alt=""></a>
       <div style='display: none;' class="form-container">
-        <h1>Sign up for our mailing list to stay in the loop.</h1>
+        <h1>Stay in the loop.</h1>
         <form class="" action="https://formspree.io/contact@offline-projects.com" method="post">
           <input type="text" name="firstname" value="" placeholder="Your first name">
           <input type="email" name="email" value="" placeholder="Your E-mail">
           <input type="hidden" name="_subject" value="New mailing list submission!" />
+          <input id='submitemail' type="submit" value="Send">
         </form>
         <div class="socials">
-          <img src="assets/igicon.png" alt="">
+          <a href="https://instagram.com/offlineprojects"></a><img src="assets/igicon.png" alt="">
           <a href="https://www.facebook.com/pg/offlineprojects/events/?ref=page_internal"><img src="assets/facebook-icon.png" alt=""></a>
         </div>
       </div>
+    </div>
+    <div id='backToHome' class="">
+      <p id='homeText'>HOME</p>
+      <p id='carat3'>╲╱</p>
     </div>
   </div>
   </div>

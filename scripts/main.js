@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('#upcoming-link').css('display', "block")
     $('#homeText').css('color', 'black');
     $('#carat3').css('color', 'black');
-    $('#backToHome').css('marginTop', '285px');
+    $('#backToHome').css('marginTop', '-168px');
     $('#upcoming-link').css('color','black')
     $('.form-container').css('display','block')
 
@@ -64,24 +64,24 @@ $(document).ready(function() {
     continuousVertical: false,
     continuousHorizontal: true,
     scrollHorizontallyKey: 'MC4wLjAuMF9kTVNjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVkWU0=',
-    scrollHorizontally: true,
+    scrollHorizontally: false,
     interlockedSlides: true,
     dragAndMove: true,
     offsetSections: false,
-    resetSliders: true,
+    resetSliders: false,
     fadingEffect: true,
-    normalScrollElements: '#element1, .element2, .contentBox',
+    normalScrollElements: '.contentBox, .contentBox2, .slide1, .contactInfo',
     scrollOverflow: false,
     scrollOverflowReset: false,
     scrollOverflowOptions: null,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
-    touchSensitivity: 15,
-    normalScrollElementTouchThreshold: 5,
+    touchSensitivity: 100,
+    normalScrollElementTouchThreshold: 15,
     bigSectionsDestination: null,
     controlArrows: false,
     anchors: [
-      'home', 'connect', ''
+      'home', 'connect',
     ],
     verticalCentered: true,
     sectionsColor: [
@@ -136,7 +136,7 @@ $(document).ready(function() {
   $('#carat4').click(function() {
     $.fn.fullpage.moveSectionUp();
   })
-  $('#homeTex, #carat3').click(function() {
+  $('#homeText, #carat3').click(function() {
     $.fn.fullpage.moveSlideRight();
   })
 });
