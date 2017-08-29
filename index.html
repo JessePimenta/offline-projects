@@ -13,13 +13,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=.9">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/jquery.fullPage.css">
+  <link rel="shortcut icon" href="assets/OP.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="scripts/jquery.fullPage.extensions.min.js" charset="utf-8"></script>
-  <script src="scripts/fullPage.scrollHorizontally.min.js" charset="utf-8"></script>
-  <!-- <script src="scripts/video.js" charset="utf-8"></script> -->
+  <script src="scripts/jquery.fullpage.extensions.min.js" charset="utf-8"></script>
+  <script src="scripts/fullpage.scrollHorizontally.min.js" charset="utf-8"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
   <script src="scripts/hackertyper.js" charset="utf-8"></script>
-  <link rel="shortcut icon" href="assets/OP.png">
 
 
 </head>
@@ -32,8 +31,6 @@
           <p>OFFLINE PROJECTS</p>
         </header>
         <div class="contentBox">
-
-          <!--typer  -->
           <section>
             <div class="buzz_wrapper">
               <div class="text">
@@ -82,15 +79,9 @@
     <p id='upcomingText' style='display:none'>UPCOMING</p>
     <p id='carat2'>╲╱</p>
   </div>
-  <video id="source" muted playsinline data-autoplay data-keepplaying loop preload>
+  <video id="source" muted data-keepplaying data-autoplay loop preload poster="assets/posterimage.png">
            <source src="assets/stringout1.mp4" type="video/mp4">
-          </video>
-  <!-- <canvas id="playback"></canvas> -->
-  <!-- <video id="source" height="360px" width="480px" preload autoplay loop controls></video>
-<canvas id="playback"></canvas> -->
-
-
-
+  </video>
   <div class="bottomLink">
     <a id='contact'>
       <p>CONTACT</p>
@@ -107,9 +98,10 @@
         <h1>Stay in the loop.</h1>
         <form class="" action="https://formspree.io/contact@offline-projects.com" method="post">
           <input type="text" name="firstname" value="" placeholder="Your first name">
-          <input type="email" name="email" value="" placeholder="Your E-mail">
+          <input type="email" name="email" value="" placeholder="Your e-mail">
           <input type="hidden" name="_subject" value="New mailing list submission!" />
-          <input id='submitemail' type="submit" value="Send">
+          <!-- <button id='subscribe' type="button" name="submit" type='submit' value="submit">Send</button> -->
+          <input style='' type="submit" name="" value="Send">
         </form>
         <div class="socials">
           <a href="https://instagram.com/offlineprojects"></a><img src="assets/igicon.png" alt="">
@@ -118,7 +110,6 @@
       </div>
     </div>
     <div id='backToHome' class="">
-      <p id='homeText'>HOME</p>
       <p id='carat3'>╲╱</p>
     </div>
   </div>

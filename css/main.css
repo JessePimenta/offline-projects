@@ -55,7 +55,7 @@ p#carat2 {
 }
 
 p#carat3 {
-    transform: translate(25px);
+    transform: translate(33px);
 }
   .contentBox {
       width: 860px;
@@ -123,8 +123,37 @@ p#carat3 {
     border-top: 1px solid black;
 }
 
+button#subscribe {
+    display: block;
+    font-size: 20px;
+    color: white;
+    width: 100px;
+    margin: 0 auto;
+    height: 50px;
+    z-index: 2;
+    position: relative;
+    background: black;
+    border: none;
+}
 
-/* iPhone 6 and 6 Plus */
+input[type="submit"] {
+    /*visibility: hidden;*/
+    -webkit-appearance: none;
+    background: black;
+    color: white;
+    width: 100px;
+    height: 50px;
+    font-size: 22px;
+    /*margin-top: -50px;*/
+    margin-left: 10%;
+    font-weight: bold;
+    border-radius: 0px;
+    font-family: "Optima" !important;
+    position: relative;
+    z-index: 4;
+}
+
+
 @media only screen
   and (max-device-width: 640px),
   only screen and (max-device-width: 667px),
@@ -135,13 +164,27 @@ p#carat3 {
   }
 
   h1#subcopy {
-    width: 260px !important;
+    width: 290px !important;
 }
 div#msg2 {
     font-size: 18px;
     width: 260px;
     margin-top: -100px;
 }
+
+.socials {
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 50px !important;
+    padding-right: 0px !important;
+}
+
+.form-container > h1 {
+    color: black;
+    font-weight: bold;
+    margin-right: -50px !important;
+}
+
  }
 
 @media (max-width:640px) {
@@ -195,6 +238,58 @@ div#msg2 {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
+
+  input[type="email"] {
+    border: 1px solid black;
+    padding: 12px;
+    background: transparent;
+    font-size: 20px;
+    font-family: "Optima", sans-serif;
+    /* text-decoration: underline; */
+    color: white;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    margin-bottom: 10px !important;
+    margin-right: 20px !important;
+    margin-left: 70px !important;
+}
+
+  input#submitemail {
+    border: 1px solid black;
+    padding: 12px;
+    background: black;
+    font-size: 40px;
+    font-family: "Optima", sans-serif;
+    /* text-decoration: underline; */
+    color: white;
+}
+
+button#subscribe {
+    display: block;
+    font-size: 20px;
+    color: white;
+    width: 100px;
+    margin: 0 auto;
+    height: 50px;
+    z-index: 2;
+    position: relative;
+    background: black;
+    border: none;
+    margin-left: 42%;
+}
+
+p#carat3 {
+    transform: translate(298px);
+}
+
+  .media-container {
+      padding-top: 0px !important;
+      padding-right: 50px;
+      margin-top: -100px;
+  }
 
 
 .contentBox2 {
@@ -673,11 +768,13 @@ p#carat4 {
 .form-container {
     color: black;
     position: relative;
+    z-index: 4;
 }
 
 .form-container > h1 {
     color: black;
     font-weight: bold;
+    /* margin-right: 40px; */
 }
 
 input[type="text"] {
@@ -704,7 +801,8 @@ input[type="email"] {
 .socials {
     width: 200px;
     margin: 0 auto;
-    padding-left: 100px;
+    padding-left: 0px;
+    padding-right: 70px;
 }
 
 .socials > img {

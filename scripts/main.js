@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  $(window).on('scroll',function(){
+    $('#source').play()
+  })
+
   $('#button').click(function() {
     $('#msg1').css('display', 'none');
     $('#msg2').css('display', 'none');
@@ -19,16 +23,18 @@ $(document).ready(function() {
     $('#upcoming-link').css('display', "block")
     $('#homeText').css('color', 'black');
     $('#carat3').css('color', 'black');
-    $('#backToHome').css('marginTop', '-168px');
+    // $('#carat3').css('transform', 'translate(228px)');
+    // $('#backToHome').css('marginTop', '-168px');
     $('#upcoming-link').css('color','black')
     $('.form-container').css('display','block')
 
   })
   $('#button2').click(function() {
     $('#logo').css('filter', 'invert(0%)')
-    $('#backToHome').css('marginTop', '272px');
+    // $('#backToHome').css('marginTop', '272px');
     $('#msg1').css('display', 'block');
     $('#carat3').css('color', 'white');
+    // $('#carat3').css('transform', 'translate(-98px)');
     $('#upcomingText').css("display", "none")
     $('#workText').css("display", "block")
     $('#msg2').css('display', 'block');
