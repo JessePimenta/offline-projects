@@ -33,6 +33,10 @@ video {
   h1 {
     font-weight: 800;
 }
+
+#subcopy {
+  font-size: 60px !important
+}
   #console {
     /* width: 60%; */
     /* padding-top: 30px; */
@@ -55,18 +59,18 @@ video {
 }
 
 p#carat2 {
-    transform: translate(8px);
+    transform: translate(18px);
 }
 
 p#carat3 {
-    transform: translate(33px);
+    transform: translate(38px);
 }
   .contentBox {
       width: 860px;
       height: 490px;
       text-align: left;
       margin: 0 auto;
-      border: 4px solid white;
+      border: 6.5px solid white;
       padding-top: 30px;
       padding-bottom: 30px;
       padding-left: 50px;
@@ -112,11 +116,30 @@ p#carat3 {
     opacity: 0.5;
 }
 
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
 .contactInfo {
     position: relative;
     transform: translateY(-30px);
     overflow-y: scroll;
 }
+
 
   img#contact-bg {
     margin: 0 auto;
@@ -510,7 +533,7 @@ div#msg2 {
 }
 .buzz_wrapper span{
   position:absolute;
-  -webkit-filter: blur(1px);
+  /*-webkit-filter: blur(1px);*/
   font-size: 80px;
   font-family:'Optima', fixed;
   font-weight:bold;
@@ -518,10 +541,10 @@ div#msg2 {
 .buzz_wrapper span:nth-child(1){
   color:green;
   margin-left:-2px;
-  -webkit-filter: blur(2px);
+  /*-webkit-filter: blur(2px);*/
 }
 .buzz_wrapper span{
-  -webkit-animation: blur 30ms infinite, jerk 50ms infinite;
+  /*-webkit-animation: blur 30ms infinite, jerk 50ms infinite;*/
 }
 .buzz_wrapper .text{
   -webkit-animation: jerkwhole 10s infinite;
@@ -553,7 +576,7 @@ div#msg2 {
 }
 .buzz_wrapper1 span1{
   position:absolute;
-  -webkit-filter: blur(1px);
+  /*-webkit-filter: blur(1px);*/
   font-size: 60px;
   font-family:'Optima', fixed;
   font-weight: 800;
@@ -561,11 +584,12 @@ div#msg2 {
 .buzz_wrapper span1:nth-child(1){
   color:#fff;
   margin-left: -102px;
-  -webkit-filter: blur(2px);
+  /*-webkit-filter: blur(2px);*/
   margin-top: -60px;
 }
 .buzz_wrapper1 span1{
-  -webkit-animation: blur 30ms infinite, jerk 50ms infinite;/**/
+  /*-webkit-animation: blur 30000ms infinite, jerk 50ms infinite;/**/
+  /*-webkit-animation: jerk 50ms infinite;/**/*/
 }
 .buzz_wrapper1 .text1{
   -webkit-animation: jerkwhole 10s infinite;
@@ -703,9 +727,10 @@ img#logo {
     position: relative;
     100%: 500px
     top: 0;
-    width: 100px;
+    width: 120px;
     float: right;
-    margin-top: -70px;
+    margin-top: -80px;
+    padding-right: 0px;
 }
 div#work {
     color: white;
