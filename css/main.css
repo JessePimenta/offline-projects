@@ -58,6 +58,12 @@ video {
     padding-top: 40px;
 }
 
+a#contact {color: white;transform: rotate(90deg);float: left;z-index: 2;position: relative;margin-top: -308px;padding-right: 0px;}
+
+p#carat {
+    transform: translate(32px);
+}
+
 p#carat2 {
     transform: translate(18px);
 }
@@ -470,7 +476,7 @@ padding-top: 77px;
 }
 @media (max-width: 1084px) {
   .buzz_wrapper {
-  margin-left: -60px;
+  /* margin-left: -60px; */
   height: 1140px;
   }
   div#msg1 {
@@ -507,7 +513,8 @@ div#msg2 {
     position: relative;
   }
   .buzz_wrapper {
-  margin-left: -50px;
+  /* margin-left: -50px; */
+  height: 640px;
   }
   div#msg1 {
     font-size: 22px;
