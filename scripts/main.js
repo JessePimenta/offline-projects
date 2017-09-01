@@ -4,7 +4,47 @@ $(document).ready(function() {
     $('#source').play()
   })
 
-  $('#button').click(function() {
+  $('#off').on({
+    'click': function() {
+         var src = ($(this).attr('src') === 'assets/OnOff-11.png')
+            ? 'assets/OnOff_White-11.png'
+            : 'assets/OnOff-11.png';
+         $(this).attr('src', src);
+    }
+});
+
+
+var count = 1;
+
+$('#off').click(function () {
+  count += 1;
+  console.log(count);
+
+  if (count % 2 ) {
+    $('#logo').css('filter', 'invert(0%)')
+    // $('#backToHome').css('marginTop', '272px');
+    $('#msg1').css('display', 'block');
+    $('#carat3').css('color', 'white');
+    // $('#carat3').css('transform', 'translate(-98px)');
+    $('#upcomingText').css("display", "none")
+    $('#workText').css("display", "block")
+    $('#msg2').css('display', 'block');
+    $('.onlineProjectsText').css('display', 'none');
+    $('video').css('filter', 'invert(0%)');
+    $('.onlineProjectsText').css('color', 'white');
+    $('#contact').css('color', 'white');
+    $('#work').css('color', 'white');
+    $('#homeText').css('color', 'white');
+    $('header').css('color', 'white')
+    $('.contentBox').css('border-color', 'white');
+    $('video').css('opacity', '1');
+    $('#upcoming-link').css('color','white')
+    $('.form-container').css('display','none')
+    $('#media-kit').css('display','block')
+    $('#media-pdf').css('display','block')
+
+  }
+  else {
     $('#msg1').css('display', 'none');
     $('#msg2').css('display', 'none');
     $('.onlineProjectsText').css('display', 'block');
@@ -27,30 +67,34 @@ $(document).ready(function() {
     // $('#backToHome').css('marginTop', '-168px');
     $('#upcoming-link').css('color','black')
     $('.form-container').css('display','block')
-
-  })
+  }
+});
+  // $('#off').click(function() {
+  //
+  //
+  // })
   $('#button2').click(function() {
-    $('#logo').css('filter', 'invert(0%)')
-    // $('#backToHome').css('marginTop', '272px');
-    $('#msg1').css('display', 'block');
-    $('#carat3').css('color', 'white');
-    // $('#carat3').css('transform', 'translate(-98px)');
-    $('#upcomingText').css("display", "none")
-    $('#workText').css("display", "block")
-    $('#msg2').css('display', 'block');
-    $('.onlineProjectsText').css('display', 'none');
-    $('video').css('filter', 'invert(0%)');
-    $('.onlineProjectsText').css('color', 'white');
-    $('#contact').css('color', 'white');
-    $('#work').css('color', 'white');
-    $('#homeText').css('color', 'white');
-    $('header').css('color', 'white')
-    $('.contentBox').css('border-color', 'white');
-    $('video').css('opacity', '1');
-    $('#upcoming-link').css('color','white')
-    $('.form-container').css('display','none')
-    $('#media-kit').css('display','block')
-    $('#media-pdf').css('display','block')
+    // $('#logo').css('filter', 'invert(0%)')
+    // // $('#backToHome').css('marginTop', '272px');
+    // $('#msg1').css('display', 'block');
+    // $('#carat3').css('color', 'white');
+    // // $('#carat3').css('transform', 'translate(-98px)');
+    // $('#upcomingText').css("display", "none")
+    // $('#workText').css("display", "block")
+    // $('#msg2').css('display', 'block');
+    // $('.onlineProjectsText').css('display', 'none');
+    // $('video').css('filter', 'invert(0%)');
+    // $('.onlineProjectsText').css('color', 'white');
+    // $('#contact').css('color', 'white');
+    // $('#work').css('color', 'white');
+    // $('#homeText').css('color', 'white');
+    // $('header').css('color', 'white')
+    // $('.contentBox').css('border-color', 'white');
+    // $('video').css('opacity', '1');
+    // $('#upcoming-link').css('color','white')
+    // $('.form-container').css('display','none')
+    // $('#media-kit').css('display','block')
+    // $('#media-pdf').css('display','block')
 
 
   })
@@ -133,9 +177,9 @@ $(document).ready(function() {
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
   });
 
-  $('#contact, #carat').click(function() {
-    $.fn.fullpage.moveSectionDown();
-  })
+  // $('#contact, #carat').click(function() {
+  //   $.fn.fullpage.moveSlideLeft();
+  // })
   $('#work, #carat2').click(function() {
     $.fn.fullpage.moveSlideRight();
   })

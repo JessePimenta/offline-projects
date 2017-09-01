@@ -79,6 +79,7 @@ p#carat3 {
       font-size: 22px;
       overflow-y: scroll;
       position: relative;
+      overflow-x: hidden;
       color: white;
       margin-top: 50px;
   }
@@ -410,8 +411,8 @@ p#carat3 {
   box-sizing: border-box;
   top: 30px;
   left: 30px;
-  -webkit-animation: switchOff 1300ms linear infinite alternate;
-  animation: switchOff 1300ms linear infinite alternate;
+  /*-webkit-animation: switchOff 1300ms linear infinite alternate;
+  animation: switchOff 1300ms linear infinite alternate;*/
 }
 
 #button2  {
@@ -424,8 +425,8 @@ p#carat3 {
   box-sizing: border-box;
   top: 30px;
   left: 30px;
-  -webkit-animation: switchOff 1300ms linear infinite alternate;
-  animation: switchOff 1300ms linear infinite alternate;
+  /*-webkit-animation: switchOff 1300ms linear infinite alternate;
+  animation: switchOff 1300ms linear infinite alternate;*/
   position: absolute;
 }
 
@@ -862,6 +863,10 @@ input[type="email"] {
 
 form {
     margin-bottom: 20px;
+}
+
+img#off {
+    width: 40px;
 }
 
 
