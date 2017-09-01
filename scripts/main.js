@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  var count = 1;
-
+  var count = 0;
+console.log(count);
 //  lightswitch img src ternary switch
   $('#off').on({
     'click': function() {
@@ -19,35 +19,12 @@ $(document).ready(function() {
     console.log(count);
 
     if (count % 2) {
-      $('#logo').css('filter', 'invert(0%)')
-      // $('#backToHome').css('marginTop', '272px');
-      $('#msg1').css('display', 'block');
-      $('#carat3').css('color', 'white');
-      // $('#carat3').css('transform', 'translate(-98px)');
-      $('#upcomingText').css("display", "none")
-      $('#workText').css("display", "block")
-      $('#msg2').css('display', 'block');
-      $('.onlineProjectsText').css('display', 'none');
-      $('video').css('filter', 'invert(0%)');
-      $('.onlineProjectsText').css('color', 'white');
-      $('#contact').css('color', 'white');
-      $('#work').css('color', 'white');
-      $('#homeText').css('color', 'white');
-      $('header').css('color', 'white')
-      $('.contentBox').css('border-color', 'white');
-      $('video').css('opacity', '1');
-      $('#upcoming-link').css('color', 'white')
-      $('.form-container').css('display', 'none')
-      $('#media-kit').css('display', 'block')
-      $('#media-pdf').css('display', 'block')
-
-    }
-
-    else {
       $('#msg1').css('display', 'none');
       $('#msg2').css('display', 'none');
+      $('.offlineProjectsText').css('display', 'none');
       $('.onlineProjectsText').css('display', 'block');
       $('.onlineProjectsText').css('color', 'black');
+      $('.buzz_wrapper').css('height','760px')
       $('#contact').css('color', 'black');
       $('#work').css('color', 'black');
       $('header').css('color', 'black');
@@ -66,6 +43,34 @@ $(document).ready(function() {
       // $('#backToHome').css('marginTop', '-168px');
       $('#upcoming-link').css('color', 'black')
       $('.form-container').css('display', 'block')
+
+    }
+
+    else {
+      $('#logo').css('filter', 'invert(0%)')
+      $('.buzz_wrapper').css('height','1050px')
+      // $('#backToHome').css('marginTop', '272px');
+      // $('#msg1').css('display', 'block');
+      $('#carat3').css('color', 'white');
+      $('#msg').css('display', 'none');
+      // $('#carat3').css('transform', 'translate(-98px)');
+      $('#upcomingText').css("display", "none")
+      $('#workText').css("display", "block")
+      // $('#msg2').css('display', 'block');
+      $('.onlineProjectsText').css('display', 'none');
+      $('.offlineProjectsText').css('display', 'block');
+      $('video').css('filter', 'invert(0%)');
+      $('.onlineProjectsText').css('color', 'white');
+      $('#contact').css('color', 'white');
+      $('#work').css('color', 'white');
+      $('#homeText').css('color', 'white');
+      $('header').css('color', 'white')
+      $('.contentBox').css('border-color', 'white');
+      $('video').css('opacity', '1');
+      $('#upcoming-link').css('color', 'white')
+      $('.form-container').css('display', 'none')
+      $('#media-kit').css('display', 'block')
+      $('#media-pdf').css('display', 'block')
     }
   });
 
