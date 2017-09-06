@@ -11,29 +11,72 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/OGIMAGE.png">
   <meta name="viewport" content="width=device-width, initial-scale=.9">
+  <link rel="stylesheet" href="/css/txt.wav.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/jquery.fullPage.css">
   <link rel="stylesheet" href="/css/hover.css">
   <link rel="shortcut icon" href="assets/OP.png">
+  <script src="scripts/txt.wav.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="scripts/jquery.fullpage.extensions.min.js" charset="utf-8"></script>
-  <script src="scripts/fullpage.scrollHorizontally.min.js" charset="utf-8"></script>
-  <script src="scripts/main.js" charset="utf-8"></script>
+  <script src="scripts/jquery.fullpage.extensions.min.js"></script>
+  <script src="scripts/fullpage.scrollHorizontally.min.js"></script>
+  <script src="scripts/main.js"></script>
   <!-- <script src="scripts/hackertyper.js" charset="utf-8"></script> -->
 </head>
 
 <body>
   <div id="fullpage">
     <div class="section">
-      <div class="slide slide1">
+      <div class="slide">
+        <div class="contentBox2">
+          <!-- <div class="overlay"></div> -->
+          <div class="contactInfo">
+            <div class="goBack">
+              <!-- <p id='carat4'>V</p> -->
+            </div>
+
+            <h1>General:</h1>
+            <h1 class='email'>contact@offline-projects.com</h1>
+            <br>
+            <h1>Creative Director:</h1>
+            <h1 class='name'>Adrian Yu</h1>
+            <h1 class='email'>adrian@offline-projects.com</h1>
+            <br>
+            <h1>Strategy Director:</h1>
+            <h1 class='name'>Tim Kosters</h1>
+            <h1 class='email'>tim@offline-projects.com</h1>
+            <br>
+            <h1>Programming Director:</h1>
+            <h1 class='name'>Jonathan Alcindor</h1>
+            <h1 class='email'>jonathan@offline-projects.com</h1>
+            <br>
+            <h1>Executive Producer:</h1>
+            <h1 class='name'>Sienna Beritto</h1>
+            <h1 class='email'>sienna@offline-projects.com</h1>
+            <br>
+            <h1>PR / Social Manager:</h1>
+            <h1 class='name'>Alexis Castro</h1>
+            <h1 class='email'>alexis@offline-projects.com</h1>
+            <br>
+            <h1>Operations Manager:</h1>
+            <h1 class='name'>Chris Jaime</h1>
+            <h1 class='email'>chris@offline-projects.com</h1>
+            <br>
+          </div>
+          <!-- <img id='contact-bg' src="assets/stringout.png" alt=""> -->
+        </div>
+      </div>
+      <div class="slide slide1 active">
         <header>
-          <p>OFFLINE PROJECTS</p>
+          <p class="txtwav slow" id='op-head'>OFFLINE PROJECTS</p>
+          <p class='ol-head' style='display:none' id='op-head'>ONLINE PROJECTS</p>
+          <p id='newsletterLink'>NEWSLETTER</p>
         </header>
         <div class="contentBox">
           <section>
             <div class="buzz_wrapper">
               <div class="text">
-                <span>
+                <span class='txtwav slow'>
                   <!-- <div id="msg"/></div> -->
                   <div class="offlineProjectsText">
                     <h1>Offline Projects is a new media experiential series, showcasing progressive underground talent in untraditional spaces.</h1>
@@ -75,87 +118,46 @@
     </section>
   </div>
   <a id='contact'>
-    <p class='hvr-push' id='contactText'>CONTACT</p>
+    <p class='hvr-bob' id='contactText'>CONTACT</p>
     <p id='carat'>V</p>
   </a>
   <div class="buttonContainer">
   </div>
   <div id='work' class="">
-    <p class='hvr-push' id='workText'>WORK</p>
-    <p class='hvr-pop' id='upcomingText' style='display:none'>UPCOMING</p>
+    <p class='hvr-bob' id='workText'>WORK</p>
+    <p class='hvr-bob' id='upcomingText' style='display:none'>UPCOMING</p>
     <p id='carat2'><img src="assets/X_white-11.png" alt=""></p>
   </div>
   <video id="source" muted data-keepplaying data-autoplay loop preload poster="assets/posterimage.png"><source src="assets/OP_WebBGblack_v2.mp4" type="video/mp4"></video>
   <div class="bottomLink">
     <div class="on-off">
-      <img id='off' src="assets/OnOff_White-11.png" alt="">
+      <img class='hvr-bob' id='off' src="assets/OnOff_White-11.png" alt="">
     </div>
     <img id='logo' src="assets/OP.png" alt="">
   </div>
   </div>
   <div class="slide">
+    <header>
+      <p id='op-head' class='homeLink' style='float:none;'>OFFLINE PROJECTS</p>
+    </header>
     <div class="media-container">
       <h1 id='media-kit'>MEDIA KIT</h1>
       <a id='media-pdf' href="assets/OP_MediaKit_063017 (1).pdf" download><img src="assets/pdf-logo.ico" alt=""></a>
-      <!-- <div style='display: none;' class="form-container">
-        <h1>OPx is our weekly newsletter, you plug in to OP and what's happening under the radar in music and art with exclusive interviews and content – all in  a ~5 minute read.</h1>
-        <form class="" action="https://formspree.io/contact@offline-projects.com" method="post">
-          <input type="text" name="firstname" value="" placeholder="Your first name">
-          <input type="email" name="email" value="" placeholder="Your e-mail">
-          <input type="hidden" name="_subject" value="New mailing list submission!" />
-          <input style='' type="submit" name="" value="Send">
-        </form>
+      <div style='display: none;' class="form-container">
+        <!-- <h1>OPx is our weekly newsletter, you plug in to OP and what's happening under the radar in music and art with exclusive interviews and content – all in  a ~5 minute read.</h1> -->
         <div class="socials">
           <a href="https://instagram.com/offlineprojects"></a><img src="assets/igicon.png" alt="">
           <a href="https://www.facebook.com/pg/offlineprojects/events/?ref=page_internal"><img src="assets/facebook-icon.png" alt=""></a>
         </div>
-      </div> -->
+      </div>
     </div>
     <div id='backToHome' class="">
-      <p id='carat3'>V</p>
+      <!-- <p id='carat3'>V</p> -->
     </div>
   </div>
   </div>
-  <div id='' class="section secondPage">
-    <div class="contentBox2">
-      <div class="overlay"></div>
-      <div class="contactInfo">
-        <div class="goBack">
-          <p id='carat4'>V</p>
-        </div>
-
-        <h1>General:</h1>
-        <h1 class='email'>contact@offline-projects.com</h1>
-        <br>
-        <h1>Creative Director:</h1>
-        <h1 class='name'>Adrian Yu</h1>
-        <h1 class='email'>adrian@offline-projects.com</h1>
-        <br>
-        <h1>Strategy Director:</h1>
-        <h1 class='name'>Tim Kosters</h1>
-        <h1 class='email'>tim@offline-projects.com</h1>
-        <br>
-        <h1>Programming Director:</h1>
-        <h1 class='name'>Jonathan Alcindor</h1>
-        <h1 class='email'>jonathan@offline-projects.com</h1>
-        <br>
-        <h1>Executive Producer:</h1>
-        <h1 class='name'>Sienna Beritto</h1>
-        <h1 class='email'>sienna@offline-projects.com</h1>
-        <br>
-        <h1>PR / Social Manager:</h1>
-        <h1 class='name'>Alexis Castro</h1>
-        <h1 class='email'>alexis@offline-projects.com</h1>
-        <br>
-        <h1>Operations Manager:</h1>
-        <h1 class='name'>Chris Jaime</h1>
-        <h1 class='email'>chris@offline-projects.com</h1>
-        <br>
-      </div>
-      <img id='contact-bg' src="assets/stringout.png" alt="">
-    </div>
-
-  </div>
+  <!-- <div id='' class="section secondPage">
+  </div> -->
   </div>
 </body>
 
