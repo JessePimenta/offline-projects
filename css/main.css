@@ -892,8 +892,12 @@ a#upcoming-link {
   transform: translateY(0px);
 }
 p#carat4 {
-  transform: rotate(180deg);
+  transform: rotate(270deg);
   margin-top: auto;
+  float: right;
+  right: 30px;
+  position: absolute;
+  top: 223px;
 }
 ::-webkit-input-placeholder { font-family: "Optima"; color: white; }
 ::-moz-placeholder { font-family: "Optima"; color: white; } /* firefox 19+ */

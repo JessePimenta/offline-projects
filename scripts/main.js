@@ -180,7 +180,7 @@ console.log(count);
   $('#contact, #carat').click(function() {
     $.fn.fullpage.moveSlideLeft();
   })
-  $('#work, #carat2').click(function() {
+  $('#work, #carat2, #carat4').click(function() {
     $.fn.fullpage.moveSlideRight();
   })
   $('#carat4').click(function() {
