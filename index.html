@@ -27,7 +27,7 @@
 <body>
   <div id="fullpage">
     <div class="section">
-      <div class="slide">
+      <div class="slide" data-tooltip='contact'>
         <div class="contentBox2">
           <!-- <div class="overlay"></div> -->
           <div class="contactInfo">
@@ -66,7 +66,7 @@
           <!-- <img id='contact-bg' src="assets/stringout.png" alt=""> -->
         </div>
       </div>
-      <div class="slide slide1 active">
+      <div class="slide slide1 active" data-tooltip='home'>
         <header>
           <p class="txtwav slow" id='op-head'>OFFLINE PROJECTS</p>
           <p class='ol-head' style='display:none' id='op-head'>ONLINE PROJECTS</p>
@@ -86,6 +86,10 @@
                   <div class="onlineProjectsText">
                     <h1>Online Projects is an experiential creative agency.</h1>
                     <h1 id='subcopy'>We partner with select clients to create innovative experiences with the spirit of Offline Projects. Using the same OP formula, we bring to life groundbreaking experiences in a full 360 degree process – from creative to production to amplification.</h1>
+                    <h1></h1>
+                  </div>
+                  <div class="newsletterText">
+                    <h1>OPX is our weekly newsletter, your plug into OP and what’s happening under the radar in music & art with exclusive interviews and content all in a < 5 minute read.</h1>
                     <h1></h1>
                   </div>
                 </span>
@@ -119,14 +123,16 @@
   </div>
   <a id='contact'>
     <p class='hvr-bob' id='contactText'>CONTACT</p>
-    <p id='carat'>V</p>
+    <p id='carat'>
+      <img id='whiteArrow' src="assets/Arrow_White-11.png" alt="">
+    </p>
   </a>
   <div class="buttonContainer">
   </div>
   <div id='work' class="">
     <p class='hvr-bob' id='workText'>WORK</p>
     <p class='hvr-bob' id='upcomingText' style='display:none'>UPCOMING</p>
-    <p id='carat2'><img src="assets/X_white-11.png" alt=""></p>
+    <p id='carat2'><img src="/assets/white-11.png" alt=""></p>
   </div>
   <video id="source" muted data-keepplaying data-autoplay loop preload poster="assets/posterimage.png"><source src="assets/OP_WebBGblack_v2.mp4" type="video/mp4"></video>
   <div class="bottomLink">
@@ -136,7 +142,7 @@
     <img id='logo' src="assets/OP.png" alt="">
   </div>
   </div>
-  <div class="slide">
+  <div class="slide" data-tooltip='work'>
     <header>
       <p id='op-head' class='homeLink' style='float:none;'>OFFLINE PROJECTS</p>
     </header>

@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   var count = 0;
+  var switchCount = 0
 console.log(count);
 //  lightswitch img src ternary switch
   $('#off').on({
@@ -14,11 +15,25 @@ console.log(count);
 
   // switching content based on odd/even clicks
 
-  $('#off').click(function() {
-    count += 1;
-    console.log(count);
+  $('#newsletterLink').click(function(){
+    count +=1;
+    console.log(count + "newsletter count");
+    if (count % 2 || switchCount % 2) {
+      $('.offlineProjectsText').css('display', 'none');
+      $('.onlineProjectsText').css('display', 'none');
+      $('.newsletterText').css('display', 'block');
 
-    if (count % 2) {
+    }
+    else {
+      // $('.newsletterText').css('display', 'none');
+    }
+  })
+
+  $('#off').click(function() {
+    switchCount += 1;
+    console.log(switchCount + "switch count");
+
+    if (switchCount % 2) {
       $('#msg1').css('display', 'none');
       $('#msg2').css('display', 'none');
       $('.offlineProjectsText').css('display', 'none');
@@ -45,6 +60,8 @@ console.log(count);
       $('#upcoming-link').css('color', 'black')
       $('.form-container').css('display', 'block')
       $('.contentBox2').css('color', 'black');
+      $('.newsletterText').css('color', 'black');
+
 
     }
 
@@ -73,12 +90,16 @@ console.log(count);
       $('.form-container').css('display', 'none')
       $('#media-kit').css('display', 'block')
       $('#media-pdf').css('display', 'block')
+      $('.newsletterText').css('color', 'white');
+
     }
   });
 
   $('#fullpage').fullpage({
     css3: true,
-    scrollingSpeed: 1700,
+    scrollingSpeed: 1000,
+    animateAnchor: true,
+    recordHistory: false,
     autoScrolling: true,
     fitToSection: true,
     fitToSectionDelay: 0,
@@ -96,7 +117,7 @@ console.log(count);
     interlockedSlides: true,
     dragAndMove: true,
     offsetSections: false,
-    resetSliders: true,
+    resetSliders: false,
     fadingEffect: true,
     normalScrollElements: '.contentBox, .contentBox2, .slide1, .contactInfo',
     scrollOverflow: false,
