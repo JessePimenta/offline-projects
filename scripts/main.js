@@ -34,6 +34,7 @@ console.log(count);
     console.log(switchCount + "switch count");
 
     if (switchCount % 2) {
+      $('.newsletterText').css('display', 'none');
       $('#msg1').css('display', 'none');
       $('#msg2').css('display', 'none');
       $('.offlineProjectsText').css('display', 'none');
@@ -52,6 +53,7 @@ console.log(count);
       $('.ol-head').css("display", "block")
       $('#upcomingText').css("display", "block")
       $('#logo').css('filter', 'invert(100%)')
+      $('#whiteArrow').css('filter', 'invert(100%)')
       $('#media-kit').css('display', 'none')
       $('#media-pdf').css('display', 'none')
       $('#upcoming-link').css('display', "block")
@@ -67,10 +69,12 @@ console.log(count);
 
     else {
       $('#logo').css('filter', 'invert(0%)')
+      $('.newsletterText').css('display', 'none');
       $('#op-head').css("display", "block")
       $('.ol-head').css("display", "none")
       $('.buzz_wrapper').css('height','1050px')
       $('#carat2').css('filter', 'invert(0%)');
+      $('#whiteArrow').css('filter', 'invert(0%)');
       $('.contentBox2').css('color', 'white');
       $('#carat3').css('color', 'white');
       $('#msg').css('display', 'none');
