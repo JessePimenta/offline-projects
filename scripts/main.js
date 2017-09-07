@@ -41,6 +41,12 @@ console.log(count);
       $('.onlineProjectsText').css('display', 'block');
       $('.onlineProjectsText').css('color', 'black');
       $('#carat2').css('filter', 'invert(100%)');
+      $('#mc_embed_signup input.email').css('border-color','black')
+      // $('input.email').attr('placeholder').css('color','black')
+      $('input.email').addClass('inputChange');
+      $('#mc_embed_signup .button').css('border-color','black')
+      $('#mc_embed_signup .button').css('color','black')
+      $('#mc_embed_signup input.email').css('color','black')
       $('.buzz_wrapper').css('height','760px')
       $('#contact').css('color', 'black');
       $('#work').css('color', 'black');
@@ -69,6 +75,11 @@ console.log(count);
 
     else {
       $('#logo').css('filter', 'invert(0%)')
+      $('input.email').removeClass('inputChange');
+      $('#mc_embed_signup .button').css('border-color','white')
+      $('#mc_embed_signup .button').css('color','white')
+      $('#mc_embed_signup input.email').css('color','white')
+      $('#mce-EMAIL').css('border-color','white')
       $('.newsletterText').css('display', 'none');
       $('#op-head').css("display", "block")
       $('.ol-head').css("display", "none")

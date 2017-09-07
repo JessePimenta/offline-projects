@@ -904,6 +904,10 @@ p#carat4 {
 :-ms-input-placeholder { font-family: "Optima"; color: white; } /* ie */
 input:-moz-placeholder { font-family: "Optima"; color: white; }
 
+.inputChange::-webkit-input-placeholder {
+  color: black !important;
+}
+
 #mc_embed_signup {
   /* background: #fff; */
   clear: left;
