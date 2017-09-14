@@ -1,3 +1,12 @@
+video::-webkit-media-controls {
+  display: none;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+
 body, html {
   font-family: "Optima", Arial, Helvetica, sans-serif;
   background: #000;
@@ -34,7 +43,7 @@ video {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  opacity: 0.2;
+  opacity: 1;
   height: auto;
   z-index: 0;
   /*filter: invert(100%);*/
@@ -68,6 +77,13 @@ h1 {
   z-index: 2;
   position: relative;
   padding-top: 40px;
+}
+
+img#opxlogo {
+    width: 50px;
+    -webkit-filter: invert(100%);
+    margin-left: 790px;
+    margin-top: 10px;
 }
 
 a#contact {
@@ -109,7 +125,7 @@ p#carat3 {
   position: relative;
   overflow-x: hidden;
   color: white;
-  margin-top: 130px;
+  margin-top: 20px;
 }
 
 .contentBox2 {
@@ -225,6 +241,53 @@ input[type="submit"] {
 
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) {
 
+  .bottomLink {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    z-index: 2;
+    position: relative;
+    padding-top: 0px;
+}
+
+img#opxlogo {
+    width: 50px;
+    -webkit-filter: invert(100%);
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+  div#work {
+    color: white;
+    transform: rotate(-90deg);
+    float: right;
+    z-index: 2;
+    position: relative;
+    margin-top: -370px !important;
+    padding-right: 20px;
+}
+  a#contact {
+    margin-top: -340px !important;
+}
+
+  p#carat4 {
+    transform: rotate(270deg);
+    margin-top: auto;
+    float: right;
+    right: 30px;
+    position: absolute;
+    top: 222px !important;
+}
+
+  img#whiteArrow {
+    right: 77px !important;
+}
+  img#roller {
+    width: 100%;
+    margin-left: -50px !important;
+}
+
 .media-container {
   margin-left: 50px !important;
 }
@@ -264,7 +327,7 @@ input[type="submit"] {
   .socials {
     width: 200px;
     margin: 0 auto;
-    padding-left: 50px !important;
+    padding-left: 0px !important;
     padding-right: 0px !important;
   }
   .form-container>h1 {
@@ -275,6 +338,19 @@ input[type="submit"] {
 }
 
 @media (max-width:640px) {
+
+  img#opxlogo {
+    width: 50px;
+    -webkit-filter: invert(100%);
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+  img#roller {
+    width: 100%;
+    margin-left: 0px !important;
+}
+
   #button {
     top: 20px !important;
     left: 20px !important;
@@ -293,6 +369,12 @@ input[type="submit"] {
 }
 
 @media (max-width:1084px) and (min-width:640px) {
+  img#opxlogo {
+    width: 50px;
+    -webkit-filter: invert(100%);
+    margin-left: 0px;
+    margin-top: 10px;
+}
   div#msg1 {
     font-size: 42px;
     width: 590px;
@@ -317,6 +399,24 @@ input[type="submit"] {
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  .bottomLink {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    z-index: 2;
+    position: relative;
+    padding-top: 0px;
+}
+
+   img#opxlogo {
+    width: 50px;
+    -webkit-filter: invert(100%);
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
   input[type="email"] {
     border: 1px solid black;
     padding: 12px;
@@ -480,7 +580,11 @@ input[type="submit"] {
   padding-top: 77px;
 }
 
-
+a#onlinep {
+    text-decoration: underline;
+    color: black;
+    pointer-events: none;
+}
 /*alt hacker type*/
 
 .buzz_wrapper {
@@ -826,7 +930,7 @@ div#work {
 }
 p {
   font-weight: normal;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 h1.email {
   text-decoration: underline;
@@ -885,6 +989,21 @@ a#upcoming-link {
   text-decoration: none;
   text-align: center;
 }
+
+a#offlinep {
+    text-decoration: underline;
+    pointer-events: none;
+}
+a#opxlink {
+    text-decoration: underline;
+    pointer-events: none;
+}
+
+p#newsletterLink > img {
+    width: 60px;
+    margin-top: -9px;
+    -webkit-filter: invert(100%);
+}
 .goBack {
   font-size: 18px;
   /* margin-top: -50px; */
@@ -897,7 +1016,7 @@ p#carat4 {
   float: right;
   right: 30px;
   position: absolute;
-  top: 223px;
+  top: 222px;
 }
 ::-webkit-input-placeholder { font-family: "Optima"; color: white; }
 ::-moz-placeholder { font-family: "Optima"; color: white; } /* firefox 19+ */
@@ -951,6 +1070,7 @@ input[type="email"] {
   margin: 0 auto;
   padding-left: 0px;
   /* padding-right: 70px; */
+  padding-top: 40px;
 }
 .socials>img {
   width: 40px;
@@ -1106,5 +1226,59 @@ p#contactText {
     font-weight: 800;
     position: relative;
     color: white;
+  }
+}
+
+
+.Loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 14.6rem;
+  margin-top: 7.3rem;
+  margin-bottom: 7.3rem;
+}
+.Loader:before, .Loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  filter: drop-shadow(0 0 0.75556rem rgba(255, 255, 255, 0.75));
+}
+.Loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1.7rem #fff;
+  animation-name: pulsA;
+}
+.Loader:after {
+  width: calc(100% - 1.7rem*2);
+  padding-bottom: calc(100% - 1.7rem*2);
+  box-shadow: 0 0 0 0 #fff;
+  animation-name: pulsB;
+}
+
+@keyframes pulsA {
+  0% {
+    box-shadow: inset 0 0 0 1.7rem #fff;
+    opacity: 1;
+  }
+  50%, 100% {
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 0;
+  }
+}
+@keyframes pulsB {
+  0%, 50% {
+    box-shadow: 0 0 0 0 #fff;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1.7rem #fff;
+    opacity: 1;
   }
 }

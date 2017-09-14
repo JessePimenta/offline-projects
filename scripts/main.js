@@ -1,4 +1,16 @@
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
 $(document).ready(function() {
+
+
+
+var vids = $("video");
+$.each(vids, function(){
+       this.controls = false;
+});
+
+
 
   var count = 0;
   var switchCount = 0
@@ -15,14 +27,14 @@ console.log(count);
 
   // switching content based on odd/even clicks
 
-  $('#newsletterLink').click(function(){
+  $('#opxlogo').click(function(){
     count +=1;
     console.log(count + "newsletter count");
     if (count % 2 || switchCount % 2) {
-      $('.offlineProjectsText').css('display', 'none');
-      $('.onlineProjectsText').css('display', 'none');
-      $('.newsletterText').css('display', 'block');
-
+      $('.offlineProjectsText').fadeOut('slow')
+      $('.onlineProjectsText').fadeOut('slow');
+      $('.newsletterText').delay(800).fadeIn('slow');
+      $('.newsletterText').delay(800).fadeIn('slow')
     }
     else {
       // $('.newsletterText').css('display', 'none');
@@ -37,9 +49,12 @@ console.log(count);
       $('.newsletterText').css('display', 'none');
       $('#msg1').css('display', 'none');
       $('#msg2').css('display', 'none');
-      $('.offlineProjectsText').css('display', 'none');
-      $('.onlineProjectsText').css('display', 'block');
-      $('.onlineProjectsText').css('color', 'black');
+      $('.offlineProjectsText').fadeOut("fast")
+      // $('.onlineProjectsText').css('display', 'block');
+			$('header').css('color', 'black');
+			$('.onlineProjectsText').css('color', 'black');
+      $('.onlineProjectsText').delay(800).fadeIn( 'slow' );
+      $('#subcopy').delay(800).fadeIn( 'slow' );
       $('#carat2').css('filter', 'invert(100%)');
       $('#mc_embed_signup input.email').css('border-color','black')
       // $('input.email').attr('placeholder').css('color','black')
@@ -50,7 +65,6 @@ console.log(count);
       $('.buzz_wrapper').css('height','760px')
       $('#contact').css('color', 'black');
       $('#work').css('color', 'black');
-      $('header').css('color', 'black');
       $('.contentBox').css('border-color', 'black');
       $('video').css('filter', 'invert(100%)');
       $('video').css('opacity', '1');
@@ -59,7 +73,7 @@ console.log(count);
       $('.ol-head').css("display", "block")
       $('#upcomingText').css("display", "block")
       $('#logo').css('filter', 'invert(100%)')
-      $('#whiteArrow').css('filter', 'invert(100%)')
+      $('img#whiteArrow').css('filter', 'invert(100%)')
       $('#media-kit').css('display', 'none')
       $('#media-pdf').css('display', 'none')
       $('#upcoming-link').css('display', "block")
@@ -69,15 +83,22 @@ console.log(count);
       $('.form-container').css('display', 'block')
       $('.contentBox2').css('color', 'black');
       $('.newsletterText').css('color', 'black');
+      $('.media-container').css('padding-top','0px')
+			$('#opxlogo').css('filter', 'invert(0%)')
+
 
 
     }
 
     else {
       $('#logo').css('filter', 'invert(0%)')
+      $('#opxlogo').css('filter', 'invert(100%)')
+			// $('#subcopy0').delay( 800 ).fadeIn("slow")
+      $('.media-container').css('padding-top','250px')
       $('input.email').removeClass('inputChange');
       $('#mc_embed_signup .button').css('border-color','white')
       $('#mc_embed_signup .button').css('color','white')
+      $('#mc_embed_signup .button').css('background','transparent')
       $('#mc_embed_signup input.email').css('color','white')
       $('#mce-EMAIL').css('border-color','white')
       $('.newsletterText').css('display', 'none');
@@ -85,20 +106,20 @@ console.log(count);
       $('.ol-head').css("display", "none")
       $('.buzz_wrapper').css('height','1050px')
       $('#carat2').css('filter', 'invert(0%)');
-      $('#whiteArrow').css('filter', 'invert(0%)');
+      $('img#whiteArrow').css('filter', 'invert(0%)');
       $('.contentBox2').css('color', 'white');
       $('#carat3').css('color', 'white');
       $('#msg').css('display', 'none');
       $('#upcomingText').css("display", "none")
       $('#workText').css("display", "block")
-      $('.onlineProjectsText').css('display', 'none');
-      $('.offlineProjectsText').css('display', 'block');
+			$('header').css('color', 'white')
+      $('.onlineProjectsText').fadeOut("fast")
+      $('.offlineProjectsText').delay(400).fadeIn("slow");
       $('video').css('filter', 'invert(0%)');
       $('.onlineProjectsText').css('color', 'white');
       $('#contact').css('color', 'white');
       $('#work').css('color', 'white');
       $('#homeText').css('color', 'white');
-      $('header').css('color', 'white')
       $('.contentBox').css('border-color', 'white');
       $('video').css('opacity', '1');
       $('#upcoming-link').css('color', 'white')
@@ -132,7 +153,7 @@ console.log(count);
     interlockedSlides: true,
     dragAndMove: true,
     offsetSections: false,
-    resetSliders: false,
+    resetSliders: true,
     fadingEffect: true,
     normalScrollElements: '.contentBox, .contentBox2, .slide1, .contactInfo',
     scrollOverflow: false,

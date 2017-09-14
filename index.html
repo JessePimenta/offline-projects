@@ -27,6 +27,7 @@
 
 <body>
   <div id="fullpage">
+
     <div class="section">
       <div class="slide" data-tooltip='contact'>
         <div class="contentBox2">
@@ -71,7 +72,7 @@
         <header>
           <p class="txtwav slow" id='op-head'>OFFLINE PROJECTS</p>
           <p class='ol-head' style='display:none' id='op-head'>ONLINE PROJECTS</p>
-          <p id='newsletterLink'>NEWSLETTER</p>
+          <img class='hvr-pulse' id='opxlogo' src="assets/opxlogo.png" />
         </header>
         <div class="contentBox">
           <section>
@@ -80,24 +81,22 @@
                 <span class='txtwav slow'>
                   <!-- <div id="msg"/></div> -->
                   <div class="offlineProjectsText">
-                    <h1>Offline Projects is a new media experiential series, showcasing progressive underground talent in untraditional spaces.</h1>
-                    <h1 id='subcopy'>Every OP experience follows a simple formula: forward-thinking musician + new media artist + unique space. Our vision is to bridge the gap between art and nightlife using popup site-specific experiences. Each iteration is a distinctive onetime event – never repeating, always innovating.</h1>
-                    <h1></h1>
+                    <h1><a id='offlinep' href="#">Offline Projects</a> is a new media experiential series, showcasing progressive underground talent in untraditional spaces.</h1>
+                    <h1 class='subcopy0' id='subcopy'>Every OP experience follows a simple formula: forward-thinking musician + new media artist + unique space. Our vision is to bridge the gap between art and nightlife using popup site-specific experiences. Each iteration is a distinctive onetime event – never repeating, always innovating.</h1>
                   </div>
                   <div class="onlineProjectsText">
-                    <h1>Online Projects is an experiential creative agency.</h1>
-                    <h1 id='subcopy'>We partner with select clients to create innovative experiences with the spirit of Offline Projects. Using the same OP formula, we bring to life groundbreaking experiences in a full 360 degree process – from creative to production to amplification.</h1>
-                    <h1></h1>
+                    <h1><a id='onlinep' href="#">Online Projects</a> is an experiential creative agency.</h1>
+                    <h1 class='subcopy' id='subcopy'>We partner with select clients to create innovative experiences with the spirit of Offline Projects. Using the same OP formula, we bring to life groundbreaking experiences in a full 360 degree process – from creative to production to amplification.</h1>
                   </div>
                   <div class="newsletterText txtwav slow">
-                    <h1>OPX is our weekly newsletter, your plug into OP and what’s happening under the radar in music & art with exclusive interviews and content all in a < 5 minute read.
+                    <h1><a id='opxlink' href="#">OPx</a> is our weekly newsletter, your plug into OP and what’s happening under the radar in music & art with exclusive interviews and content all in a < 5 minute read.
                       <br>
                       <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="//offline-projects.us14.list-manage.com/subscribe/post?u=30f169a672211d7793db6b3e5&amp;id=e080a92160" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 	<!-- <label for="mce-EMAIL"></label> -->
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email." required>
+	<span id='getOPX'>Get OPX for free:</span>&nbsp;<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email." required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_30f169a672211d7793db6b3e5_e080a92160" tabindex="-1" value=""></div>
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
@@ -126,7 +125,10 @@
     <p class='hvr-bob' id='upcomingText' style='display:none'>UPCOMING</p>
     <p id='carat2'><img src="/assets/white-11.png" alt=""></p>
   </div>
-  <video id="source" muted autoplay playsinline data-keepplaying data-autoplay loop preload poster="assets/posterimage.png"><source src="assets/OP_WebBGblack_v2.mp4" type="video/mp4"></video>
+  <video id="source" controls='false' muted autoplay playsinline data-keepplaying data-autoplay loop preload poster="assets/posterimage.png">
+    <source src="assets/OP_WebBGblack_v2.mp4" type="video/mp4">
+    </video>
+
   <div class="bottomLink">
     <div class="on-off">
       <img class='hvr-bob' id='off' src="assets/OnOff_White-11.png" alt="">
@@ -143,8 +145,9 @@
       <a id='media-pdf' href="assets/OP_MediaKit_063017 (1).pdf" download><img src="assets/pdf-logo.ico" alt=""></a>
       <div style='display: none;' class="form-container">
         <!-- <h1>OPx is our weekly newsletter, you plug in to OP and what's happening under the radar in music and art with exclusive interviews and content – all in  a ~5 minute read.</h1> -->
+        <a href="https://www.facebook.com/events/330369704100341"><img id='roller' src="assets/roller.jpg" alt=""></a>
         <div class="socials">
-          <a href="https://instagram.com/offlineprojects"></a><img src="assets/igicon.png" alt="">
+          <a href="https://instagram.com/offlineprojects"><img src="assets/igicon.png" alt=""></a>
           <a href="https://www.facebook.com/pg/offlineprojects/events/?ref=page_internal"><img src="assets/facebook-icon.png" alt=""></a>
         </div>
       </div>
