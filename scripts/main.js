@@ -53,7 +53,7 @@ console.log(count);
       // $('.onlineProjectsText').css('display', 'block');
 			$('header').css('color', 'black');
 			$('.onlineProjectsText').css('color', 'black');
-      $('.onlineProjectsText').delay(800).fadeIn( 'slow' );
+      $('.onlineProjectsText').delay(400).fadeIn( 'slow' );
       $('#subcopy').delay(800).fadeIn( 'slow' );
       $('#carat2').css('filter', 'invert(100%)');
       $('#mc_embed_signup input.email').css('border-color','black')
@@ -61,6 +61,8 @@ console.log(count);
       $('input.email').addClass('inputChange');
       $('#mc_embed_signup .button').css('border-color','black')
       $('#mc_embed_signup .button').css('color','black')
+      $('#opxsub').css('color','black')
+      $('#opxlink').css('color','black')
       $('#mc_embed_signup input.email').css('color','black')
       $('.buzz_wrapper').css('height','760px')
       $('#contact').css('color', 'black');
@@ -74,6 +76,7 @@ console.log(count);
       $('#upcomingText').css("display", "block")
       $('#logo').css('filter', 'invert(100%)')
       $('img#whiteArrow').css('filter', 'invert(100%)')
+      $('img#whiteArrow2').css('filter', 'invert(100%)')
       $('#media-kit').css('display', 'none')
       $('#media-pdf').css('display', 'none')
       $('#upcoming-link').css('display', "block")
@@ -85,6 +88,8 @@ console.log(count);
       $('.newsletterText').css('color', 'black');
       $('.media-container').css('padding-top','0px')
 			$('#opxlogo').css('filter', 'invert(0%)')
+			$('#onlinep').fadeIn(400)
+
 
 
 
@@ -93,6 +98,9 @@ console.log(count);
     else {
       $('#logo').css('filter', 'invert(0%)')
       $('#opxlogo').css('filter', 'invert(100%)')
+			$('#opxlink').css('color','white')
+			$('#opxsub').css('color','white')
+
 			// $('#subcopy0').delay( 800 ).fadeIn("slow")
       $('.media-container').css('padding-top','250px')
       $('input.email').removeClass('inputChange');
@@ -107,6 +115,7 @@ console.log(count);
       $('.buzz_wrapper').css('height','1050px')
       $('#carat2').css('filter', 'invert(0%)');
       $('img#whiteArrow').css('filter', 'invert(0%)');
+      $('img#whiteArrow2').css('filter', 'invert(0%)');
       $('.contentBox2').css('color', 'white');
       $('#carat3').css('color', 'white');
       $('#msg').css('display', 'none');
@@ -114,6 +123,7 @@ console.log(count);
       $('#workText').css("display", "block")
 			$('header').css('color', 'white')
       $('.onlineProjectsText').fadeOut("fast")
+      $('#onlinep').fadeOut("fast")
       $('.offlineProjectsText').delay(400).fadeIn("slow");
       $('video').css('filter', 'invert(0%)');
       $('.onlineProjectsText').css('color', 'white');
@@ -212,7 +222,7 @@ console.log(count);
   $('#contact, #carat').click(function() {
     $.fn.fullpage.moveSlideLeft();
   })
-  $('#work, #carat2, #carat4').click(function() {
+  $('#whiteArrow3,#work, #carat2, #carat4, .goBack').click(function() {
     $.fn.fullpage.moveSlideRight();
   })
   $('#carat4').click(function() {
