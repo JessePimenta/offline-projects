@@ -1,45 +1,51 @@
 $(window).load(function() {
-	$(".loader").fadeOut("slow");
+
+
+	if ($(this).height() > 710 && $(this).innerWidth() > 480 ) {
+		// $(".contentBox").css('height', '59%')
+		$('img#whiteArrow3').css('right','65px')
+	}
+
+  if ($(this).height() < 710 && $(this).innerWidth() >= 480 ) {
+    $(".contentBox").css('height', '59%')
+  }
 })
+
+
+
 $(document).ready(function() {
 
+  $(window).resize(function() {
+    if (this.resizeTO)
+      clearTimeout(this.resizeTO);
+    this.resizeTO = setTimeout(function() {
+      $(this).trigger('resizeEnd');
+    }, 500);
 
+    if ($(this).height() < 710) {
+      $(".contentBox").css('height', '59%')
+    } else {
+      $(".contentBox").css('height', '62%')
 
-	$(window).resize(function() {
-	    if(this.resizeTO) clearTimeout(this.resizeTO);
-	    this.resizeTO = setTimeout(function() {
-	        $(this).trigger('resizeEnd');
-	    }, 500);
+    }
+    console.log('window height: ' + $(this).height())
+  });
 
-			if ($(this).height() < 710) {
-				$(".contentBox").css('height', '59%')
-			}
-			else {
-				$(".contentBox").css('height', '62%')
+  $(window).bind('resizeEnd', function() {
+    // $(".contentBox").text($(this).width());
+    // $("#height").text($(this).height());
 
-			}
-			console.log('window height: ' + $(this).height())
-	});
+  });
 
-
-
-	$(window).bind('resizeEnd', function() {
-	    // $(".contentBox").text($(this).width());
-	    // $("#height").text($(this).height());
-
-	});
-
-var vids = $("video");
-$.each(vids, function(){
-       this.controls = false;
-});
-
-
+  var vids = $("video");
+  $.each(vids, function() {
+    this.controls = false;
+  });
 
   var count = 0;
   var switchCount = 0
-console.log(count);
-//  lightswitch img src ternary switch
+  console.log(count);
+  //  lightswitch img src ternary switch
   $('#off').on({
     'click': function() {
       var src = ($(this).attr('src') === 'assets/OnOff-11.png')
@@ -51,16 +57,15 @@ console.log(count);
 
   // switching content based on odd/even clicks
 
-  $('#opxlogo').click(function(){
-    count +=1;
+  $('#opxlogo').click(function() {
+    count += 1;
     console.log(count + "newsletter count");
     if (count % 2 || switchCount % 2) {
       $('.offlineProjectsText').fadeOut('slow')
       $('.onlineProjectsText').fadeOut('slow');
       $('.newsletterText').delay(800).fadeIn('slow');
       $('.newsletterText').delay(800).fadeIn('slow')
-    }
-    else {
+    } else {
       // $('.newsletterText').css('display', 'none');
     }
   })
@@ -75,20 +80,20 @@ console.log(count);
       $('#msg2').css('display', 'none');
       $('.offlineProjectsText').fadeOut("fast")
       // $('.onlineProjectsText').css('display', 'block');
-			$('header').css('color', 'black');
-			$('.onlineProjectsText').css('color', 'black');
-      $('.onlineProjectsText').delay(400).fadeIn( 'slow' );
-      $('#subcopy').delay(800).fadeIn( 'slow' );
+      $('header').css('color', 'black');
+      $('.onlineProjectsText').css('color', 'black');
+      $('.onlineProjectsText').delay(400).fadeIn('slow');
+      $('#subcopy').delay(800).fadeIn('slow');
       $('#carat2').css('filter', 'invert(100%)');
-      $('#mc_embed_signup input.email').css('border-color','black')
+      $('#mc_embed_signup input.email').css('border-color', 'black')
       // $('input.email').attr('placeholder').css('color','black')
       $('input.email').addClass('inputChange');
-      $('#mc_embed_signup .button').css('border-color','black')
-      $('#mc_embed_signup .button').css('color','black')
-      $('#opxsub').css('color','black')
-      $('#opxlink').css('color','black')
-      $('#mc_embed_signup input.email').css('color','black')
-      $('.buzz_wrapper').css('height','760px')
+      $('#mc_embed_signup .button').css('border-color', 'black')
+      $('#mc_embed_signup .button').css('color', 'black')
+      $('#opxsub').css('color', 'black')
+      $('#opxlink').css('color', 'black')
+      $('#mc_embed_signup input.email').css('color', 'black')
+      $('.buzz_wrapper').css('height', '760px')
       $('#contact').css('color', 'black');
       $('#work').css('color', 'black');
       $('.contentBox').css('border-color', 'black');
@@ -111,33 +116,28 @@ console.log(count);
       $('.form-container').css('display', 'block')
       $('.contentBox2').css('color', 'black');
       $('.newsletterText').css('color', 'black');
-      $('.media-container').css('padding-top','0px')
-			$('#opxlogo').css('filter', 'invert(0%)')
-			$('#onlinep').fadeIn(400)
+      $('.media-container').css('padding-top', '0px')
+      $('#opxlogo').css('filter', 'invert(0%)')
+      $('#onlinep').fadeIn(400)
 
-
-
-
-    }
-
-    else {
+    } else {
       $('#logo').css('filter', 'invert(0%)')
       $('#opxlogo').css('filter', 'invert(100%)')
-			$('#opxlink').css('color','white')
-			$('#opxsub').css('color','white')
+      $('#opxlink').css('color', 'white')
+      $('#opxsub').css('color', 'white')
 
-			// $('#subcopy0').delay( 800 ).fadeIn("slow")
-      $('.media-container').css('padding-top','250px')
+      // $('#subcopy0').delay( 800 ).fadeIn("slow")
+      $('.media-container').css('padding-top', '250px')
       $('input.email').removeClass('inputChange');
-      $('#mc_embed_signup .button').css('border-color','white')
-      $('#mc_embed_signup .button').css('color','white')
-      $('#mc_embed_signup .button').css('background','transparent')
-      $('#mc_embed_signup input.email').css('color','white')
-      $('#mce-EMAIL').css('border-color','white')
+      $('#mc_embed_signup .button').css('border-color', 'white')
+      $('#mc_embed_signup .button').css('color', 'white')
+      $('#mc_embed_signup .button').css('background', 'transparent')
+      $('#mc_embed_signup input.email').css('color', 'white')
+      $('#mce-EMAIL').css('border-color', 'white')
       $('.newsletterText').css('display', 'none');
       $('#op-head').css("display", "block")
       $('.ol-head').css("display", "none")
-      $('.buzz_wrapper').css('height','1050px')
+      $('.buzz_wrapper').css('height', '1050px')
       $('#carat2').css('filter', 'invert(0%)');
       $('img#whiteArrow').css('filter', 'invert(0%)');
       $('img#whiteArrow2').css('filter', 'invert(0%)');
@@ -147,7 +147,7 @@ console.log(count);
       $('#msg').css('display', 'none');
       $('#upcomingText').css("display", "none")
       $('#workText').css("display", "block")
-			$('header').css('color', 'white')
+      $('header').css('color', 'white')
       $('.onlineProjectsText').fadeOut("fast")
       $('#onlinep').fadeOut("fast")
       $('.offlineProjectsText').delay(400).fadeIn("slow");
@@ -224,14 +224,14 @@ console.log(count);
     onLeave: function(index, nextIndex, direction) {
       var leavingSection = $(this);
 
-      if (index == 1 && direction == 'down') {
+      if (index == 1 && direction == 'left') {
         $('#console').css('opacity', '0')
         $('#console').css('transition', '2s')
 
-      } else if (index == 2 && direction == 'up') {
-        $('#fullpage').animate({
-          transform: "translate3d(0px, 0px, 0px)"
-        }, 100)
+      } else if (index == 2 && direction == 'right') {
+        // $('#fullpage').animate({
+        //   transform: "translate3d(0px, 0px, 0px)"
+        // }, 100)
         $('#console').css('opacity', '1')
         $('#console').css('transition', '2s')
 
@@ -245,16 +245,16 @@ console.log(count);
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
   });
 
-  $('#contact, #carat').click(function() {
+  $('#contact, #carat,#homeText, #carat3, .homeLink').click(function() {
     $.fn.fullpage.moveSlideLeft();
   })
-  $('#whiteArrow3,#work, #carat2, #carat4, .goBack').click(function() {
+  $('#work, #carat2, .goBack').click(function() {
     $.fn.fullpage.moveSlideRight();
   })
-  $('#carat4').click(function() {
-    $.fn.fullpage.moveSectionUp();
-  })
-  $('#homeText, #carat3, .homeLink').click(function() {
-    $.fn.fullpage.moveSlideLeft();
-  })
+  // $('#carat4').click(function() {
+  //   $.fn.fullpage.moveSlideRight();
+  // })
+  // $('').click(function() {
+  //   $.fn.fullpage.moveSlideLeft();
+  // })
 });

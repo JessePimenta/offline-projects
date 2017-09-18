@@ -1041,8 +1041,10 @@ p#newsletterLink > img {
     -webkit-filter: invert(100%);
 }
 .goBack {
-  font-size: 18px;
-  transform: translateY(0px);
+    font-size: 18px;
+    transform: translateY(0px);
+    z-index: 5;
+    position: relative;
 }
 p#carat4 {
   transform: rotate(270deg);
