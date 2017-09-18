@@ -109,6 +109,12 @@ p#carat3 {
   transform: translate(-6px);
 }
 
+/*@media screen and (min-device-height:700px) and (max-device-height:1080px) {
+  .contentBox {
+    height: 62% !important;
+  }
+}*/
+
 .contentBox {
   width: 860px;
   height: 62%;
@@ -218,7 +224,7 @@ button#subscribe {
     font-size: 16px;
     z-index: 2;
     position: relative;
-    padding-top: 160px;
+    padding-top: 90px;
   }
 }
 
@@ -1156,7 +1162,7 @@ img#whiteArrow3 {
   transform: translateX(22px);
   padding-left: 0px;
   position: fixed;
-  right: 77px;
+  right: 75px;
   bottom: -20px;
 }
 img#whiteArrow {

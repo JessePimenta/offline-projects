@@ -5,6 +5,30 @@ $(document).ready(function() {
 
 
 
+	$(window).resize(function() {
+	    if(this.resizeTO) clearTimeout(this.resizeTO);
+	    this.resizeTO = setTimeout(function() {
+	        $(this).trigger('resizeEnd');
+	    }, 500);
+
+			if ($(this).height() < 710) {
+				$(".contentBox").css('height', '59%')
+			}
+			else {
+				$(".contentBox").css('height', '62%')
+
+			}
+			console.log('window height: ' + $(this).height())
+	});
+
+
+
+	$(window).bind('resizeEnd', function() {
+	    // $(".contentBox").text($(this).width());
+	    // $("#height").text($(this).height());
+
+	});
+
 var vids = $("video");
 $.each(vids, function(){
        this.controls = false;
@@ -77,6 +101,7 @@ console.log(count);
       $('#logo').css('filter', 'invert(100%)')
       $('img#whiteArrow').css('filter', 'invert(100%)')
       $('img#whiteArrow2').css('filter', 'invert(100%)')
+      $('img#whiteArrow3').css('filter', 'invert(100%)')
       $('#media-kit').css('display', 'none')
       $('#media-pdf').css('display', 'none')
       $('#upcoming-link').css('display', "block")
@@ -116,6 +141,7 @@ console.log(count);
       $('#carat2').css('filter', 'invert(0%)');
       $('img#whiteArrow').css('filter', 'invert(0%)');
       $('img#whiteArrow2').css('filter', 'invert(0%)');
+      $('img#whiteArrow3').css('filter', 'invert(0%)');
       $('.contentBox2').css('color', 'white');
       $('#carat3').css('color', 'white');
       $('#msg').css('display', 'none');
