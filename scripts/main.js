@@ -1,9 +1,11 @@
 $(window).load(function() {
+	$('.offlineProjectsText h1').fadeIn(2000)
+
 
 
 	if ($(this).height() > 710 && $(this).innerWidth() > 480 ) {
 		// $(".contentBox").css('height', '59%')
-		$('img#whiteArrow3').css('right','65px')
+		$('img#whiteArrow3').css('right','64px')
 	}
 
   if ($(this).height() < 710 && $(this).innerWidth() >= 480 ) {
@@ -12,8 +14,9 @@ $(window).load(function() {
 })
 
 
-
 $(document).ready(function() {
+	$('.offlineProjectsText').fadeIn(2000)
+
 
   $(window).resize(function() {
     if (this.resizeTO)
@@ -71,6 +74,10 @@ $(document).ready(function() {
   })
 
   $('#off').click(function() {
+
+		$('header').toggleClass('shakeclass')
+		$('.contentBox').animate({scrollTop: $(".contentBox")});
+
     switchCount += 1;
     console.log(switchCount + "switch count");
 

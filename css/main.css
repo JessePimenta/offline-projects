@@ -24,6 +24,21 @@ header {
   text-decoration: underline;
   /* padding-top: 20px; */
   width: 990px;
+
+}
+
+.shakeclass {
+  animation:myanim 1000ms linear;
+}
+
+
+
+@keyframes myanim
+{
+  10%{transform:scale(1)rotate(0deg);}
+  20%{transform:scale(1)rotate(-3deg);}
+  80%{transform:scale(1)rotate(3deg);}
+  100%{transform:scale(1)rotate(0deg);}
 }
 
 p#op-head {
@@ -55,6 +70,12 @@ h1 {
 }
 
 #subcopy {
+  -webkit-animation: fadeintwo 7000ms; /* Safari, Chrome and Opera > 7000m.1 */
+     -moz-animation: fadeintwo 7000ms; /* Firefox < 16 */
+      -ms-animation: fadeintwo 7000ms; /* Internet Explorer */
+       -o-animation: fadeintwo 7000ms; /* Opera < 7000m.1 */
+          animation: fadeintwo 7000ms;
+
   /* font-size: 50px !important; */
 }
 
@@ -722,7 +743,7 @@ a#onlinep {
   /* -webkit-animation: blur 30ms infinite, jerk 50ms infinite; */
 }
 .buzz_wrapper .text {
-  -webkit-animation: jerkwhole 10s infinite;
+  -webkit-animation: jerkwhole 5s infinite;
   position: relative;
 }
 @-webkit-keyframes jerkwhole {
@@ -800,7 +821,7 @@ a#onlinep {
   */
 }
 .buzz_wrapper1 .text1 {
-  -webkit-animation: jerkwhole 10s infinite;
+  -webkit-animation: jerkwhole 5s infinite;
   position: relative;
 }
 textarea {
@@ -1158,6 +1179,11 @@ p#carat2>img {
   font-weight: 800;
   position: relative;
   color: white;
+      -webkit-animation: fadein 3000ms; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 3000ms; /* Firefox < 16 */
+          -ms-animation: fadein 3000ms; /* Internet Explorer */
+           -o-animation: fadein 3000ms; /* Opera < 12.1 */
+              animation: fadein 3000ms;
 }
 img#whiteArrow3 {
   width: 25px;
@@ -1338,3 +1364,266 @@ a#opxsub {
     pointer-events: none;
     text-decoration: underline;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeintwo {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeintwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .0;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeintwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .0;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeintwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .0;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeintwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .0;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeintwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .0;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeintwo {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+
+
+
+section {
+  /* height: 350px; */
+  /* width: 94%; */
+  /* box-shadow: 0px 0px 146px 21px rgba(0, 0, 0, 0.75); */
+  /* background-color: #000; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center center; */
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* width: 100%; */
+  /* margin: 0 auto 0px; */
+}
+header a {
+  /* text-transform: uppercase; */
+  text-align: center;
+  text-decoration: none;
+  /* font-size: 4.875em; */
+  font-weight: 900;
+  color: #fff;
+}
+header p:after, header p:before {
+  content: '';
+}
+header.head {
+  /*background-color: #fff;*/
+  position: relative;
+  z-index: 10;
+}
+header.head p {
+  -webkit-transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+  -moz-transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+  transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+}
+header.head p:before, header.head p:after {
+  color: #000;
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: none;
+  display: block;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+}
+header.head p:before {
+  content: attr(data-bf);
+  position: absolute;
+  top: -45px;
+  left: -5px;
+}
+header.head p:after {
+  content: attr(data-af);
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+}
+header.head p:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+header.head p:hover:before {
+  -webkit-transform: scale(1.2) translate(-25px, -15px);
+  -moz-transform: scale(1.2) translate(-25px, -15px);
+  -ms-transform: scale(1.2) translate(-25px, -15px);
+  -o-transform: scale(1.2) translate(-25px, -15px);
+  transform: scale(1.2) translate(-25px, -15px);
+}
+header.head p:hover:after {
+  -webkit-transform: scale(1.2) translate(25px, 15px);
+  -moz-transform: scale(1.2) translate(25px, 15px);
+  -ms-transform: scale(1.2) translate(25px, 15px);
+  -o-transform: scale(1.2) translate(25px, 15px);
+  transform: scale(1.2) translate(25px, 15px);
+}
+
+
+/*.offlineProjectsText > h1:after, .offlineProjectsText > h1:before {
+  content: '';
+}
+.offlineProjectsText > h1
+  position: relative;
+  z-index: 10;
+}
+.offlineProjectsText > h1 {
+  -webkit-transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+  -moz-transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+  transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+  transition: 1s;
+
+}
+.offlineProjectsText > h1:before, .offlineProjectsText > h1:after {
+  color: #000;
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: none;
+  display: block;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  transition: 1s;
+
+}
+.offlineProjectsText > h1:before {
+  content: attr(data-bf);
+  position: absolute;
+  top: -45px;
+  left: -5px;
+  transition: 1s;
+
+}
+.offlineProjectsText > h1:after {
+  content: attr(data-af);
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  transition: 1s;
+
+}
+.offlineProjectsText > h1:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: 1s;
+
+}
+.offlineProjectsText > h1:hover:before {
+  -webkit-transform: scale(1.2) translate(-25px, -15px);
+  -moz-transform: scale(1.2) translate(-25px, -15px);
+  -ms-transform: scale(1.2) translate(-25px, -15px);
+  -o-transform: scale(1.2) translate(-25px, -15px);
+  transform: scale(1.2) translate(-25px, -15px);
+  transition: 1s;
+
+}
+.offlineProjectsText > h1:hover:after {
+  -webkit-transform: scale(1.2) translate(25px, 15px);
+  -moz-transform: scale(1.2) translate(25px, 15px);
+  -ms-transform: scale(1.2) translate(25px, 15px);
+  -o-transform: scale(1.2) translate(25px, 15px);
+  transform: scale(1.2) translate(25px, 15px);
+  transition: 1s;
+
+}*/
